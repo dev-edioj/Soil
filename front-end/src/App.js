@@ -1,22 +1,24 @@
 import React, {useState} from "react";
-
+import api from './services/api'
 import logo from "./assets/logo.png";
 
 import "./style.css";
 
 function App() {
-  /* const { login, setLogin } = useState();
-  const { senha, setSenha } = useState();
-
-
-  async function login(event) {
-    event.preventDefault();
-
-    
-
-    
+  async function getUsuarios() {
+    try {
+      const response = await api.get('/usuarios/Soil');
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   }
- */
+
+  getUsuarios()
+
+  const { login, setLogin } = useState();
+  const { senha, setSenha } = useState();
+  
   return (
     <div className="container">
       <div className="container-login">
@@ -27,11 +29,11 @@ function App() {
               <img src={logo} alt="logo soil" />
             </span>
             <div className="wrap-input">
-              <input className="input" type="text" placeholder="Usuário" />
+              <input className="input" type="text" name="login" placeholder="Usuário" />
               {/*   <span className="focus-input" data-placeholder="Usuario"></span> */}
             </div>
             <div className="wrap-input">
-              <input className="input" type="password" placeholder="Senha" />
+              <input className="input" type="password" name="senha" placeholder="Senha" />
               {/* <span className="focus-input" data-placeholder="Senha"></span> */}
             </div>
             <div className="container-login-form-btn ">

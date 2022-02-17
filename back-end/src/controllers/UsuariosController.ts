@@ -4,9 +4,30 @@ const knex = require("../database");
 
 module.exports = {
   async index(req: Request, res: Response) {
-    const results = await knex("usuarios");
+    try {
+      
+      const results = await knex("usuarios")
+      return res.status(201).json(results);
+    }
+    catch (error) {
+      res.status(500).send(error);
+    }
 
-    return res.json(results);
+  },
+
+  async showUsers(req: Request, res: Response) {
+    try {
+      const { login } = req.params;
+      
+      const results = await knex("usuarios").where({
+        login: login
+      });
+      return res.status(201).json(results);
+    }
+    catch (error) {
+      res.status(500).send(error);
+    }
+
   },
 
   async create(req: Request, res: Response) {
