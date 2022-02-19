@@ -40,7 +40,7 @@ function LoginScreen() {
                 className="input"
                 type="text"
                 name="login"
-                placeholder="Usuário"
+                placeholder="Login"
                 value={login}
                 onChange={handleFieldsChange}
               />
