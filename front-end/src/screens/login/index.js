@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import api from "../../services/api";
 import "../../style.css";
 import logo from "../../assets/logo.png";
-import novoCadastro from "../novo-cadastro";
+import NovoCadastro from "../novocadastro";
 
 function LoginScreen() {
   const [login, setLogin] = useState("");
