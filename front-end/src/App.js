@@ -16,7 +16,7 @@ function App() {
         <Route path="/refeicoes/adicionar" element={<OpcoesRefeicoes />} />
         <Route path="/refeicoes/editar" element={<OpcoesRefeicoes />} />
         <Route path="/refeicos/deletar" element={<OpcoesRefeicoes />} />
-        <Route path="/error" element={<NotFoundPage />} />
+        <Route path="/error"  element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );

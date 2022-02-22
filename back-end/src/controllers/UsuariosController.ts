@@ -5,29 +5,24 @@ const knex = require("../database");
 module.exports = {
   async index(req: Request, res: Response) {
     try {
-      
-      const results = await knex("usuarios")
+      const results = await knex("usuarios");
       return res.status(201).json(results);
-    }
-    catch (error) {
+    } catch (error) {
       res.status(500).send(error);
     }
-
   },
 
   async showUsers(req: Request, res: Response) {
     try {
       const { login } = req.params;
-      
+
       const results = await knex("usuarios").where({
-        login: login
+        login: login,
       });
       return res.status(201).json(results);
-    }
-    catch (error) {
+    } catch (error) {
       res.status(500).send(error);
     }
-
   },
 
   async create(req: Request, res: Response) {
@@ -65,4 +60,9 @@ module.exports = {
       res.status(500).send(error);
     }
   },
+
+
+
 };
+
+

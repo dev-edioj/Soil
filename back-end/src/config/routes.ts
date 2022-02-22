@@ -7,13 +7,19 @@ const knex = require('../database');
 const routes = express.Router()
 
 const UsuariosController = require('../controllers/UsuariosController')
+const RefeicoesController = require("../controllers/RefeicoesController");
 
+routes
+    //Usuario
+.get('/usuarios', UsuariosController.index)
+.get("/usuarios/:login", UsuariosController.showUsers)
+.get('/login/:login/:senha', UsuariosController.login)
+.post('/usuarios', UsuariosController.create)
 
-routes.get('/usuarios', UsuariosController.index)
-routes.get("/usuarios/:login", UsuariosController.showUsers);
-routes.post('/usuarios', UsuariosController.create)
+//Refeicoes
 
-routes.get('/login/:login/:senha', UsuariosController.login )
+.get('/refeicoes', RefeicoesController.index)
+
 
 
 
