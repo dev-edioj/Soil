@@ -27,11 +27,15 @@ const NovoCadastro = () => {
     e.preventDefault();
   
     const response = api
-      .post('/usuario', values)
-      .then((response) => {
+      .post('/usuarios', values)
+      .then(function (response) {
+        console.log(response);
         navegate('/')
-      });
-    console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+   
 
   
   };
