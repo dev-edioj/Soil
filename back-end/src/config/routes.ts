@@ -19,6 +19,11 @@ routes
 //Refeicoes
 
 .get('/refeicoes', RefeicoesController.index)
+.post('/refeicoes', RefeicoesController.create)
+.put('/refeicoes', RefeicoesController.edit)
+
+//Itens refeicoes
+
 
 
 

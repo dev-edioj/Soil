@@ -9,7 +9,10 @@ const NovoCadastro = () => {
       <div className="container-login">
         <div className="wrap-login">
           <form className="login-form">
-            <span className="login-form-title"> Olá! Junte-se a nós, crie sua conta agora! </span>
+            <span className="login-form-title">
+              {" "}
+              Olá! Junte-se a nós, crie sua conta agora!{" "}
+            </span>
             <span className="login-form-title">
               {/* <img src={logo} alt="logo soil" /> */}
             </span>
@@ -35,6 +38,14 @@ const NovoCadastro = () => {
                 type="password"
                 name="senha"
                 placeholder="Crie sua senha"
+              />
+            </div>
+            <div className="wrap-input">
+              <input
+                className="input"
+                type="password"
+                name="confirmar_senha"
+                placeholder="Confirmar senha"
               />
             </div>
             <div className="container-login-form-btn ">
