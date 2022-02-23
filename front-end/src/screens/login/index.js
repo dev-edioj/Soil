@@ -63,6 +63,7 @@ function LoginScreen() {
                   type="submit"
                   className="login-form-btn"
                   value="Entrar"
+                  
                 />
               </div>
             </Link>

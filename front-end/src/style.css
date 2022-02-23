@@ -161,7 +161,7 @@ focus-input::after {
     width: 100%;
     height: 50px;
 
-    background: linear-gradient(to left, #003d4b, rgba(3, 117, 26, 0.527));
+    background: linear-gradient(to left, rgba(3, 117, 26, 0.527), #003d4b );
 }
 
 .login-form-btn:hover{
