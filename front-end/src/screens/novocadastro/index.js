@@ -25,12 +25,22 @@ const NovoCadastro = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    const response = api
+
+       api
       .post('/usuarios', values)
       .then(function (response) {
         console.log(response);
+        if (values == null) {
+          alert("Há algo de errado no seu cadastro, verifique os dados inseridos.")
+         
+        } else {
+           alert(
+             `Seja bem-vindo (a) ${values.login}! Cadastro realizado com sucesso`
+           );
+        }
+
         navegate('/')
+        
       })
       .catch(function (error) {
         console.log(error);

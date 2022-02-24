@@ -61,6 +61,39 @@ module.exports = {
     }
   },
 
+  async update(req: Request, res: Response) {
+    try {
+      const { login, email, senha } = req.body;
+      const { id } = req.params
+      const resultsLogin= await knex("usuarios").update({ login, email, senha })
+        .where({ id })
+      
+      return res.status(200).send();
+      
+    } catch (error) {
+      res.status(500).send(error);
+    }
+  },
+
+  
+  async delete(req: Request, res:Response) {
+    try {
+      const { id } = req.params;
+
+        await knex("usuarios")
+        .where({ id })
+        .del();
+      
+      return res.status(200).send();
+      
+    } catch(error) {
+      res.status(500).send(error);
+    }
+  }
+
+
+
+
 
 
 };
