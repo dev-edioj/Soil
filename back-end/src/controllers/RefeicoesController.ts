@@ -47,14 +47,13 @@ module.exports = {
       res.status(500).send(error);
     }
     },
-    async edit(req: Request, res: Response) {
+  async update(req: Request, res: Response) {
         try {
             const { tipo_refeicao, usuario_id } = req.body;
 
             await knex("refeicoes").insert({
                 tipo_refeicao,
                 usuario_id,
-      
             });
             return res.status(201).send();
         } catch (error) {

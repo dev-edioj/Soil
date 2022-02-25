@@ -3,24 +3,21 @@ import { Link } from "react-router-dom";
 
 import "../../style.css";
 
+
 const MostrarRefeicoes = () => {
+ 
+
   return (
     <div className="container">
-      <div className="container-list">
-        <div className="input-btn">
-          <Link to="/refeicoes/adicionar">
-            <input type="submit" className="btn-options" value="Adicionar" />
-          </Link>
+      <div className="container-table">
+        <div className="table-title">
+          <h1 className="title">Minhas refeicoes</h1>
         </div>
-        <div className="input-btn">
-          <Link to="/refeicoes/editar">
-            <input type="submit" className="btn-options" value="Editar" />
-          </Link>
-        </div>
-        <div className="input-btn ">
-          <Link to="/refeicoes/deletar">
-            <input type="submit" className="btn-options" value="Excluir" />
-          </Link>
+        <div className="wrap-table"></div>
+        <div className="container-table--btn ">
+          <input className="table-btn" type="submit" value="Adicionar" />
+          <input className="table-form-btn" type="submit" value="Editar" />
+          <input className="table-form-btn" type="submit" value="Deletar" />
         </div>
       </div>
     </div>

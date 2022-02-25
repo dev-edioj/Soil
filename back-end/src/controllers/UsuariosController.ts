@@ -75,7 +75,6 @@ module.exports = {
     }
   },
 
-  
   async delete(req: Request, res:Response) {
     try {
       const { id } = req.params;
