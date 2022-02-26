@@ -61,7 +61,6 @@ const NovoCadastro = () => {
               Olá! Junte-se a nós, crie sua conta agora!{" "}
             </span>
             <span className="login-form-title">
-              {/* <img src={logo} alt="logo soil" /> */}
             </span>
             <div className="wrap-input">
               <input
