@@ -8,6 +8,7 @@ import "../../style.css";
 
 
 const NovoCadastro = () => {
+  
   const [values, setValues] = useState({
     login:"",
     email: "",
@@ -25,7 +26,7 @@ const NovoCadastro = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+//TODO IMPLEMENTAR FUNÇÃO PARA VALIDAR INPUTS
        api
       .post('/usuarios', values)
       .then(function (response) {

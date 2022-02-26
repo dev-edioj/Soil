@@ -4,7 +4,7 @@
  */
 exports.up = knex => knex.schema.createTable('refeicoes', table => {
         table.increments('id').unique().primary().notNullable()
-        table.enum('tipo_refeicao', ['cafe da manha', 'almoço', 'cafe da tarde', 'janta/ceia',]).unique().notNullable()
+        table.enum('tipo_refeicao', ['cafe da manha', 'almoço', 'cafe da tarde', 'janta ou ceia']).notNullable()
 
         table.timestamp('created_at').defaultTo(knex.fn.now())
         table.timestamp('updated_at').defaultTo(knex.fn.now())

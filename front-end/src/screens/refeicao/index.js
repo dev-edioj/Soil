@@ -10,6 +10,7 @@ const MostrarRefeicoes = () => {
     api.get('/refeicoes')
       .then((response) => {
         setRefeicoes(response.data); 
+        console.table(refeicoes)
       })
       .catch(error => {
         console.log("Deu errado")
@@ -31,7 +32,7 @@ const MostrarRefeicoes = () => {
             return (
               <table className="dados_refeicoes" key={key}>
                 <caption>
-                {/*   <p>{JSON.stringify(refeicoes.itens)}</p> */}
+                 
                   <h2 className="title">Minhas refeicoes</h2>
                 </caption>
                 <tr>

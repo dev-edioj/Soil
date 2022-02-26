@@ -21,8 +21,8 @@ routes
 
   .get("/refeicoes", RefeicoesController.index)
   .post("/refeicoes", RefeicoesController.create)
-  .put("/refeicoes", RefeicoesController.update);
-
+  .put("/refeicoes/:id", RefeicoesController.update)
+  .delete("/refeicoes/:id", RefeicoesController.delete);
 //Itens refeicoes
 
 
