@@ -6,7 +6,6 @@ import "../../style.css";
 
 
 
-
 const NovoCadastro = () => {
   
   const [values, setValues] = useState({
